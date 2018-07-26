@@ -2,6 +2,11 @@ body {
   background: salmon;
   font-family: system-ui, sans-serif;
   font-size: 20px;
+  margin: 2em;
+}
+
+img {
+  max-width: 100%;
 }
 
 nav {
@@ -17,14 +22,60 @@ nav a {
   }
 
 nav a:hover {
-  background: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.2);
 }
 
  nav a {
-
    padding: 20px;
  }
 
 nav a.active {
   background: white;
 }
+
+.cardgroup {
+  display: flex;
+  flex-direction: colum;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.card {
+  background: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  box-shadow: 0 2px 0 1px rgba(0,0,0.5);
+  padding: 20px;
+  border: solid 10px white;
+  margin: 10px;
+  transition: box-shadow 1s, transform 1s;
+}
+
+.card:hover {
+  box-shadow: 0 3px 0 6px rgba(0, 0, 0, 1);
+transform: scale(1.05);
+}
+
+@media (min-width: 500px) {
+
+  body {
+    background: lightyellow;
+  }
+}
+
+@media (min-width: 820px) {
+
+  body {
+    background: lightblue;
+    display: flex;
+  }
+
+  nav {
+flex-direction: column;
+margin-right: 20 px;
+      }
+
+  .cardgroup {
+    flex-direction: row;
+   }
+
+  }
